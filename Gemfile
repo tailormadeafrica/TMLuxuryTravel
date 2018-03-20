@@ -25,6 +25,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+
+
+
 gem 'jquery-rails', '~> 2.0.0'
 
 # To use ActiveModel has_secure_password
@@ -118,6 +121,8 @@ group :production do
   gem 'puma', '3.8.2'
   gem 'heroku-deflater'
 end
+
+
 
 gem 'redis', '3.3.5'
 
