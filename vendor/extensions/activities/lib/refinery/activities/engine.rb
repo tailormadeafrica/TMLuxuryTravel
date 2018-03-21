@@ -9,6 +9,7 @@ module Refinery
       initializer "register refinerycms_activities plugin" do
         Refinery::Plugin.register do |plugin|
           plugin.name = "activities"
+          plugin.hide_from_menu = true
           plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.activities_admin_activities_path }
           plugin.pathname = root
           plugin.activity = {
