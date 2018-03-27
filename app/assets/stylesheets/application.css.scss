@@ -20,7 +20,7 @@
 @mixin vertical-align ($position: relative) { position: $position!important; top: 50%!important; -webkit-transform: translateY(-50%)!important; -ms-transform: translateY(-50%)!important; transform: translateY(-50%)!important; }
 @mixin button ($height:50px,$line-height:50px,$color:$color,$border:1px solid $color,$background:transparent,$margin-top:20px,$font-size:14px,$padding:0 50px) {height:$height; line-height:$line-height; color:$color; background:$background; border:$border; margin-top:$margin-top;  font-size:$font-size; padding:$padding;border-radius:100px; font-weight:300;}
 
-$blue:#107dac; 
+$blue:#053190; 
 $color:#282629;
 
 /* For modern browsers */
@@ -141,13 +141,13 @@ strong {font-weight:500;}
 }
 
 
-#home_page .welcome {padding:50px 0 105px 0; text-align:center;
+#home_page .welcome {padding:50px 0 30px 0; text-align:center;
   h1 {margin:0 0 30px 0;}
   h2 {font-size:20px; line-height:28px;}
   .text {-webkit-column-count:2; -moz-column-count:2; column-count:2; -webkit-column-gap:30px; -moz-column-gap:30px; column-gap:30px;
     p {text-align:justify;}
   }
-  .btn-custom,.btn-custom:hover {@include button (); margin:10px 0 70px 0;}
+  .btn-custom,.btn-custom:hover {@include button (); margin:10px 0 30px 0;}
 }
 
   .safari-type,.experience {text-align:center; background:#f4f4f4; padding:50px 0;
@@ -171,16 +171,16 @@ strong {font-weight:500;}
   }
 .safari-experience { background:#f4f4f4;}
 
-  .child-site-container {text-align:center; background:$blue; padding:50px 0;
-    .child-sites {margin-top:-185px;}
-    .child-site-item {background:#ffffff; margin-bottom:30px; padding-bottom:20px;
+  .child-site-container {text-align:center; background:#f4f4f4; padding:50px 0;
+    .child-sites h1{margin:0 0 40px 0;}
+    .child-site-item {background:#ffffff; margin-bottom:30px; padding-bottom:20px; border-bottom: 1px solid #b7b7b7;
       h3 {margin:20px 0 10px 0;}
       p {font-size: 12px; line-height: 20px; color: #666666; margin-bottom: 10px; padding:0 20px; text-align:justify;text-align-last: center;}
       .pod-button {height: 40px; line-height: 40px; color: #282629; border: 1px solid #282629; font-size: 12px; padding: 0 25px; border-radius: 100px; font-weight: 300; margin: 10px 0 5px 0; display: inline-block;}
     }
     .child-sites-footer {padding-top:20px;
-      h3 {margin:0 0 10px 0; color:#ffffff;}
-      h2 {margin:0; color:#ffffff;}
+      h3 {margin:0 0 10px 0;}
+      h2 {margin:0;}
     }
   }
 
@@ -227,7 +227,7 @@ strong {font-weight:500;}
   }
 }
 
-.contact {background:$blue; text-align:center; padding:50px 0; color:#ffffff;
+.contact {background:url(/assets/bg-contact.jpg) top center no-repeat; background-size:cover; text-align:center; padding:50px 0; color:#ffffff;
   form {background:rgba(0,0,0,0.7); padding:50px 90px;
     h1 {color:#ffffff; background:url(/assets/bg-h1.gif) bottom center no-repeat; padding-bottom:25px; margin:0;}
     p {margin:25px 0 10px 0;}
@@ -244,7 +244,7 @@ strong {font-weight:500;}
     .option-group {padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.5);
       label {font-weight:300; float:left; line-height:18px;  margin:0; text-align:left;}
       .option-input {-webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; position: relative; width: 15px; height: 15px; background:transparent; border:1px solid rgba(255,255,255,0.5); cursor: pointer; position: relative; z-index: 1000; padding:0; margin:0 15px 0 0; float:left;}
-      .option-input:checked::before {background: $blue; width: 15px; height: 15px; position: absolute; content: '\2713'; display: inline-block; font-size: 12px; text-align: center; line-height: 15px; color:#ffffff;}
+      .option-input:checked::before {background: #9cffc6; width: 15px; height: 15px; position: absolute; content: '\2713'; display: inline-block; font-size: 12px; text-align: center; line-height: 15px; color:#000000;}
     }
     ::-webkit-input-placeholder {color: #ffffff;}
     ::-moz-placeholder {color: #ffffff;}
