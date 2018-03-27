@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-xs-12">
           <h1><%= @page.title %></h1>
-          <h2>Tailormade Africa is a specialist tailor-made safari and African travel company. We are the industry leaders in customer care and bespoke itinerary design.</h2>
+          <h2>Tailormade Luxury Travel is a specialist tailor-made world travel company. We are the industry leaders in customer care and bespoke itinerary design.</h2>
           <div class="text">
             <%= raw @page.content_for(:body) %>
           </div>
@@ -71,71 +71,31 @@
     </div>
   <% end %>
 
-  <% activities = Refinery::Activities::Activity.where("activity_type = ? OR activity_type = ?", 'experience', 'both').order("RANDOM()").first(10) %>
-  <% if activities.present? %>
-    <div class="experience">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h1>Africa Experiences</h1>
-            <p class="click">Please click on the options below</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="controls">
-              <span class="experience-slider-next"></span>
-              <span class="experience-slider-prev"></span>
-            </div>
-            <ul class="bxsliderExperience">
-              <% activities.each_slice(7).each do |items| %>
-                <li>
-                  <% items.each do |item| %>
-                    <% if item == items.first %>
-                      <div class="experience-item main-item">
-                        <%= link_to refinery.activities_activity_path(item) do %>
-                          <div class="caption">
-                            <h3><%= raw item.name %></h3>
-                          </div>
-                          <div class="slider-overlay"></div>
-                          <%= image_fu item.image, '440x330#c' %>
-                        <% end %>
-                      </div>
-                    <% else %>
-                      <div class="experience-item">
-                        <%= link_to refinery.activities_activity_path(item) do %>
-                          <div class="caption">
-                            <h3><%= raw item.name %></h3>
-                          </div>
-                          <div class="slider-overlay"></div>
-                          <%= image_fu item.image, '217x162#c' %>
-                        <% end %>
-                      </div>
-                    <% end %>
-                  <% end %>
-                </li>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="experience-footer">
-              <h3 class="hidden-xs">Tailormade Africa has something for everyone.</h3>
-              <h2 class="hidden-xs">Speak to an expert at +44 7809 726266 (Clyde) or +44 7791 360170 (Rob)</h2>
-              <a href="/activities" class="btn btn-custom">Browse All Experiences</a>
-            </div>
+
+  <div class="child-site-container">
+    <div class="container">
+    <div class="child-sites">
+    <div class="row">
+      <%= render '/refinery/pods/shared/pods', :pod_types => ['child_site'] -%>
+    </div>
+    </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="child-sites-footer">
+            <h3 class="hidden-xs">Tailormade Luxury Travel has something for everyone.</h3>
+            <h2 class="hidden-xs">Speak to an expert at +44 7809 726266 (Clyde) or +44 7791 360170 (Rob)</h2>
           </div>
         </div>
       </div>
     </div>
-  <% end %>
+  </div>
+
 
   <div class="why-tma">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h1>Why Tailormade Africa?</h1>
+          <h1>Why Tailormade Luxury Travel?</h1>
         </div>
       </div>
       <div class="row">

@@ -4,7 +4,7 @@
       <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
         <form accept-charset="UTF-8" action="/contact" method="post">
           <h1>Get In Touch</h1>
-          <p>Whether you are a seasoned Africa traveller or thinking about visiting the continent for the first time, we would love to hear from you.<br/>Speak to an expert at +44 7809 726266 (Clyde) or +44 7791 360170 (Rob) or fill in the contact form below.</p>
+          <p>Whether you are a seasoned traveller or not, we would love to hear from you.<br/>Speak to an expert at +44 7809 726266 (Clyde) or +44 7791 360170 (Rob) or fill in the contact form below.</p>
           <input type="text" name="inquiry[name]" class="form-control" placeholder="Name*" required>
           <input type="email" name="inquiry[email]" class="form-control" placeholder="Email*" required>
           <input type="text" name="inquiry[phone]" class="form-control" placeholder="Phone*" required>
@@ -37,30 +37,19 @@
           <textarea class="form-control" name="inquiry[message]" rows="3" placeholder="Message"></textarea>
           <div class="captcha"></div>
           <input type="text" id="captcha" name="inquiry[captcha]" pattern="^.*\b(y4x3b|Y4X3B|y4x3B)\b.*$" class="form-control" placeholder="Retype Captcha*" required>
-
-          <input style="margin: 15px 5px 0 0;" type="checkbox" name="inquiry[except_communication]" checked> Subscribe to email communications. <br>
-
+          <div class="option-group cf" style="border-bottom:none;">
+            <div class="row">
+              <div class="col-xs-12 col-sm-1">
+                <input type="checkbox" class="form-control option-input" name="inquiry[except_communication]">
+              </div>
+              <div class="col-xs-12 col-sm-11">
+                <label style="margin-bottom:5px;">Please tick the box to give your permission for us to keep you up to date with exciting news, offers and inspirational travel stories</label>
+                <div class="small-print">We will only contact you by email with features we feel are of interest and will never pass your details to third parties. You can unsubscribe at any time.</div>
+              </div>
+            </div>
+          </div>
           <input class="btn btn-custom" type="submit" value="Send Message">
         </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<% face = copywriting('Facebook', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
-<% twit = copywriting('Twitter', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
-<% ins = copywriting('Instagram', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
-
-<div class="social">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <ul class="list list-inline">
-          <li><a href="<%= face %>" target="_blank"><img src="/assets/facebook.gif"></a></li>
-          <li><a href="<%= twit %>" target="_blank"><img src="/assets/twitter.gif"></a></li>
-          <li><a href="<%= ins %>" target="_blank"><img src="/assets/instagram.gif"></a></li>
-        </ul>
       </div>
     </div>
   </div>
@@ -70,15 +59,23 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <%= render(:partial => "/refinery/menu", :locals => {
+<!--         <#%= render(:partial => "/refinery/menu", :locals => {
             :dom_id => 'list list-inline hidden-xs',
             :css => 'list list-inline hidden-xs'
-        }) %>
+        }) %> -->
         <img src="/assets/bottom-logo.gif" class="logo">
-        <a href="https://www.caa.co.uk/atol-protection/" target="_blank" class="hidden-xs"><img src="/assets/atol.gif"></a>
+        <% face = copywriting('Facebook', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
+        <% twit = copywriting('Twitter', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
+        <% ins = copywriting('Instagram', {:phrase_type => 'string', :scope => 'Social', :default => '#' }) %>
+        <ul class="list list-inline">
+          <li><a href="<%= face %>" target="_blank"><img src="/assets/facebook.gif"></a></li>
+          <li><a href="<%= twit %>" target="_blank"><img src="/assets/twitter.gif"></a></li>
+          <li><a href="<%= ins %>" target="_blank"><img src="/assets/instagram.gif"></a></li>
+        </ul>
+        <!-- <a href="https://www.caa.co.uk/atol-protection/" target="_blank" class="hidden-xs"><img src="/assets/atol.gif"></a> -->
         <div class="copyright">
-          © Tailormade Africa &bull; All Rights Reserved &bull; <a href="http://www.perfectcircle.co.za" target="_blank">Website by Perfect Circle.</a><br/>
-          <a href="/terms-conditions">Terms & Conditions</a> &bull; <a href="/bookings/new">Booking Form</a> &bull; <a href="/accommodations">Accommodation</a> &bull; <a href="/consumer-financial-protection">Consumer Financial Protection</a>
+          © Tailormade Luxury Travel &bull; All Rights Reserved &bull; <a href="http://www.perfectcircle.co.za" target="_blank">Website by Perfect Circle.</a><br/>
+          <a href="/terms-conditions">Terms & Conditions</a> &bull;<!--  <a href="/bookings/new">Booking Form</a> &bull; <a href="/accommodations">Accommodation</a> &bull;  --><a href="/privacy-policy">Privacy Policy</a>
         </div>
       </div>
     </div>
