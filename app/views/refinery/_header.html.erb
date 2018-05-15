@@ -42,7 +42,9 @@
     <nav class="overlay-menu">
       <ul><h2>Destinations</h2>
         <% @all_locations.each do |location| %>
-          <li><%= link_to(image_fu(location.flag_image, '20x20#c') + location.name, refinery.locations_location_path(location)) %></li>
+          <% if location.flag_image.present? %>
+            <li><%= link_to(image_fu(location.flag_image, '20x20#c') + location.name, refinery.locations_location_path(location)) %></li>
+          <% end %>
         <% end %>
           <li class="close-image"><img class="close-menu" src="/assets/close.png"/></li>
       </ul>
