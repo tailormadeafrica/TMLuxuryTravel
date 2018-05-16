@@ -156,7 +156,7 @@
       <% end %>
     <% end %>
   </div>
-<% elsif @page.link_url.present? and @page.link_url == '/blog' and @page.present? and @page.banners.published.present? %>
+<% elsif @page.present? and @page.link_url.present? and @page.link_url == '/blog' and  @page.banners.published.present? %>
   <div class="master-slider ms-skin-default" id="post_masterslider">
 <!--     <div class="search hidden-xs">
       <div class="container">
