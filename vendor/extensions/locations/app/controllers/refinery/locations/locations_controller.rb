@@ -15,6 +15,9 @@ module Refinery
         # by swapping @page for @location in the line below:
         present(@page)
       end
+      #stack 16
+
+
 
       def show
         if params[:id].present?
