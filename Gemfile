@@ -52,6 +52,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'sass', '3.4.23'
 gem 'hitimes', '1.2.4'
 gem 'rake', '12.1.0'
+gem 'coffee-script-source', '1.8.0'
 
 
 
@@ -135,7 +136,7 @@ gem 'refinerycms-accommodations', :path => 'vendor/extensions'
 gem 'refinerycms-locations', :path => 'vendor/extensions'
 gem 'refinerycms-teams', :path => 'vendor/extensions'
 
-gem 'coffee-script-source', '1.8.0'
+
 gem 'refinerycms-amenities', :path => 'vendor/extensions'
 gem 'refinerycms-bookings', :path => 'vendor/extensions'
 
