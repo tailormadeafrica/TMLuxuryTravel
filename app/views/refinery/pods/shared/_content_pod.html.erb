@@ -1,13 +1,12 @@
 <% if home_page? %>
   <div class="col-xs-12 col-sm-3">
     <div class="why-tma-item">
-      <%= link_to pod.url do %>
+      <%= link_to '#contact_area' do %>
         <% if pod.image.present? %>
           <%= image_fu pod.image, '85x85#c' %>
         <% end %>
         <h3><%= pod.name %></h3>
           <%=raw truncate(pod.body, :length => 60, :omission => "...") %>
-        <div>Find out more ></div>
       <% end %>
     </div>
   </div>
