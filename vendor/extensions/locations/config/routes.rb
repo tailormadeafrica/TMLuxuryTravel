@@ -27,6 +27,7 @@ Refinery::Core::Engine.routes.append do
     end
   end
 
+
   namespace :locations do
     resources :locations, :path => '', :only => [:index, :show]
   end

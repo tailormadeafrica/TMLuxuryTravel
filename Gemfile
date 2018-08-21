@@ -1,8 +1,11 @@
 source 'http://rubygems.org'
 
-ruby '1.9.3'
+# ruby '1.9.3'
+#
+# gem 'rails', '3.2.13'
 
-gem 'rails', '3.2.13'
+ruby '2.3.7'
+gem 'rails', '3.2.22.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -44,16 +47,19 @@ gem 'jquery-rails', '~> 2.0.0'
 
 # To use debugger
 # gem 'debugger'
-gem 'json', '1.8.1'
-gem 'babosa', '0.3.11'
-gem 'net-ssh', '2.9.2'
-gem 'rack-cache', '1.2'
+gem 'json'
+gem 'babosa', '!=0.3.6'
+gem 'net-ssh'
+gem 'rack-cache'
 gem 'bootstrap-datepicker-rails'
 gem 'sass', '3.4.23'
-gem 'hitimes', '1.2.4'
-gem 'rake', '12.1.0'
+gem 'hitimes'
+gem 'rake'
 gem 'coffee-script-source', '1.8.0'
-
+gem 'nokogiri'
+gem 'i18n'
+gem 'mime-types'
+gem 'test-unit', '~> 3.0'
 
 
 # Refinery CMS
@@ -62,7 +68,7 @@ gem 'refinerycms-core', '2.0.3'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
-gem 'i18n', '0.6.1'
+
 
 #  gem 'refinerycms-blog', '~> 2.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
@@ -99,12 +105,10 @@ gem 'airbrake', '~> 3.1.6'
 gem "jquery-colorbox-rails", "0.1.4"
 
 # Required to get Refinery working on Heroku
-gem 'fog', '~> 0.8.1'
+gem 'fog','1.22.1'
 
 #Monitoring
 gem 'newrelic_rpm', '3.17.2.327'
-
-gem 'nokogiri', '1.6.8.1'
 
 gem 'wicked_pdf'
 
