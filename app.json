@@ -1,0 +1,14 @@
+{
+  "name": "african luxury travel",
+  "description": "travel",
+  "keywords": [
+    "dokku",
+    "rails",
+    "tailormadeluxurytravel.com"
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
